@@ -6,7 +6,7 @@ import { ProductContext } from "../contexts/ProductContextProvider";
 import Products from "./common/Products";
 import Loading from "./Loading";
 const Store = () => {
-  const products = useContext(ProductContext);
+  const { products } = useContext(ProductContext);
 
   return (
     <Container>

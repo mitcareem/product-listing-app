@@ -8,7 +8,7 @@ import "swiper/css";
 import { Card, CardMedia } from "@mui/material";
 
 const Banner = () => {
-  const data = useContext(ProductContext);
+  const { data } = useContext(ProductContext);
 
   return (
     <Swiper
@@ -25,7 +25,7 @@ const Banner = () => {
       modules={[Pagination, Navigation]}
       className="mySwiper"
     >
-      {data.map((items) => (
+      {data?.map((items) => (
         <SwiperSlide key={items.id}>
           <Card sx={{ height: "130px" }}>
             <CardMedia component="div">

@@ -12,9 +12,8 @@ const ProductContextProvider = ({ children }) => {
     };
     fetchAPI();
   }, []);
-
   return (
-    <ProductContext.Provider value={products}>
+    <ProductContext.Provider value={{ products, setProducts }}>
       {children}
     </ProductContext.Provider>
   );
