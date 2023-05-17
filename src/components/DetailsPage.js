@@ -29,15 +29,16 @@ const DetailsPage = () => {
   const { state, dispatch } = useContext(CardContext);
   const [currentProduct, setCurrentProduct] = useState([]);
 
+  const params = useParams();
+  const id = params.id;
+
+
   useEffect(() => {
     const fetchAPI = async () => {
       setCurrentProduct(await GetSingleProducts(id));
     };
     fetchAPI();
-  }, []);
-
-  const params = useParams();
-  const id = params.id;
+  }, [id]);
 
   return (
     <Container maxWidth="lg">
